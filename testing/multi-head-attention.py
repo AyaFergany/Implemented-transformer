@@ -133,7 +133,7 @@ class MultiHeadAttention(nn.Module):
 
     self.dropout = nn.Dropout(p=dropout)     # initialize dropout layer
 
-    def forward(self, query: Tensor, key: Tensor, value: Tensor, mask: Tensor = None):
+  def forward(self, query: Tensor, key: Tensor, value: Tensor, mask: Tensor = None):
       """
       Args:
         query:        query vector        (batch_size, q_length, d_model)
@@ -196,8 +196,9 @@ class MultiHeadAttention(nn.Module):
       output = self.Wo(A)                                 # (32, 10, 512) x (512, 512) = (32, 10, 512) 
 
       return output, attn_probs                           # return attn_probs for visualization of the scores
-       
 
+
+## code for testing multi head attention
 torch.set_printoptions(precision=2, sci_mode=False)
 
 # convert the sequences to integers
@@ -237,9 +238,8 @@ n_heads = 4
 
 # create the attention layer
 attention = MultiHeadAttention(d_model, n_heads, dropout=0.1)
-
 print(attention.state_dict())
 
 # pass X through the attention layer three times to create Q, K, and V
-output, attn_probs = attention(X, X, X, mask=None)
-output
+output, attn_probs = attention(X, X, X, mask = None)
+print(output)
