@@ -197,6 +197,7 @@ class MultiHeadAttention(nn.Module):
 
       return output, attn_probs                           # return attn_probs for visualization of the scores
        
+
 torch.set_printoptions(precision=2, sci_mode=False)
 
 # convert the sequences to integers
@@ -240,5 +241,5 @@ attention = MultiHeadAttention(d_model, n_heads, dropout=0.1)
 print(attention.state_dict())
 
 # pass X through the attention layer three times to create Q, K, and V
-#output, attn_probs = attention(X, X, X, mask=None)
-#output
+output, attn_probs = attention(X, X, X, mask=None)
+output
