@@ -9,7 +9,6 @@ import torch.nn as nn
 import torch.nn.functional as F
 from torch import Tensor
 
-
 class Embeddings(nn.Module):
   def __init__(self, vocab_size: int, d_model: int):
     """
