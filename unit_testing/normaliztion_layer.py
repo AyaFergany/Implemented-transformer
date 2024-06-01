@@ -10,7 +10,6 @@ import torch.nn.functional as F
 from torch import Tensor
 
 class LayerNorm(nn.Module):
-
   def __init__(self, features, eps=1e-5):
     super().__init__()
     # initialize gamma to be all ones
