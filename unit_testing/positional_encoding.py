@@ -2,17 +2,12 @@
 import math
 import copy
 import numpy as np
-import sys
 
 # torch packages
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
 from torch import Tensor
-
-sys.path.append('')
-from layers.positional_encoding import PositionalEncoding
-
 
 class PositionalEncoding(nn.Module):
   def __init__(self, d_model: int, dropout: float = 0.1, max_length: int = 5000):

@@ -36,7 +36,6 @@ class Embeddings(nn.Module):
     # embeddings by constant sqrt(d_model)
     return self.lut(x) * math.sqrt(self.d_model)  
 
-## code for testing
 d_model = 4
 vocab_size=6
 
