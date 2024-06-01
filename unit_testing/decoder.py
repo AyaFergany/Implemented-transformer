@@ -57,12 +57,6 @@ src_mask = make_src_mask(tensor_sequences, pad_idx)
 de_sequences = ["Hallo! Dies ist ein Beispiel für einen Absatz, der in seine Grundkomponenten aufgeteilt wurde. Ich frage mich, was als nächstes kommt! Irgendwelche Ideen?"]
 en_sequences = ["Hello! This is an example of a paragraph that has been split into its basic components. I wonder what will come next! Any guesses?"]
 
-def sentence_to_indexes(vocab, sentence):
-    """
-    Converts a sentence (string) into a list of indices.
-    """
-    return [vocab[word] for word in sentence]
-
 # Tokenize the sentences
 de_tokenized_sequences = [tokenize(s) for s in de_sequences]
 en_tokenized_sequences = [tokenize(s) for s in en_sequences]
