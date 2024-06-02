@@ -1,6 +1,10 @@
 import torch
+import spacy
+import torchtext
 from torch import Tensor
 from torch.nn.functional import pad
+from torchtext.datasets import Multi30k
+from torchtext.data import Field, BucketIterator
 
 example = "Hello! This is an example of a paragraph that has been split into its basic components. I wonder what will come next! Any guesses?"
 
@@ -80,3 +84,6 @@ def pad_seq(seq: Tensor, max_length: int = 10, pad_idx: int = 0):
   pad_to_add = max_length - len(seq) # amount of padding to add
   
   return pad(seq,(0, pad_to_add), value=pad_idx,)
+
+
+
