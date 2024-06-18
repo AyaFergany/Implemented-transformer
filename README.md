@@ -18,3 +18,5 @@
 * **The Decoder**: a stack of identical layers that use the contextual features extracted by the encoder to generate the output sequence.
 
 and finally, built the complete Transformer model.
+
+This repo uses the transformer to translate between languages, but it is also used for other natural language processing tasks and computer vision. This implementation will cover the **translation task**.
