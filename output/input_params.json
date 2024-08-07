@@ -1,0 +1,1 @@
+{"dk": 32, "dv": 32, "h": 8, "src_vocab_size": 8500, "target_vocab_size": 6500, "src_pad_idx": 2, "target_pad_idx": 2, "num_encoders": 3, "num_decoders": 3, "dim_multiplier": 4, "pdropout": 0.1, "lr": 0.0003, "N_EPOCHS": 50, "CLIP": 1, "patience": 5}
